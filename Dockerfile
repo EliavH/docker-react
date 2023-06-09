@@ -8,4 +8,5 @@ RUN npm run build
 
 # Second FROM indicates start of new container
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
